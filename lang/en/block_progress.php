@@ -48,6 +48,7 @@ $string['lesson'] = 'Lesson';
 $string['lti'] = 'External tool';
 $string['ouwiki'] = 'OU Wiki';
 $string['page'] = 'Page';
+$string['page'] = 'Video Page';
 $string['panopto'] = 'Panopto video';
 $string['questionnaire'] = 'Questionnaire';
 $string['quiz'] = 'Quiz';

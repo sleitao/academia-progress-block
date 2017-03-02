@@ -723,6 +723,27 @@ function block_progress_monitorable_modules() {
             ),
             'defaultAction' => 'viewed'
         ),
+        'videopage' => array(  // sleitao - 2017-03-02 novo modulo videopage
+            'actions' => array(
+                'viewed' => array (
+                    'logstore_legacy'     => "SELECT id
+                                                FROM {log}
+                                               WHERE course = :courseid
+                                                 AND module = 'videopage'
+                                                 AND action = 'view'
+                                                 AND cmid = :cmid
+                                                 AND userid = :userid",
+                    'sql_internal_reader' => "SELECT id
+                                                FROM {log}
+                                               WHERE courseid = :courseid
+                                                 AND component = 'mod_videopage'
+                                                 AND action = 'viewed'
+                                                 AND objectid = :eventid
+                                                 AND userid = :userid",
+                ),
+            ),
+            'defaultAction' => 'viewed'
+        ),        
         'panopto' => array(
             'actions' => array(
                'viewed' => array (
